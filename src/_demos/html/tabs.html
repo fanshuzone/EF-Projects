@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tabs Demo</title>
+    <link href="../css/Common.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-size: 15px;
+            background-color: #fff;
+        }
+
+        .container {
+            background: #fff;
+            width: 400px;
+            height: 500px;
+            display: none;
+        }
+
+        fieldset {
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+            float: left;
+        }
+
+        #tab1, #tab2 {
+            float: left;
+            width: 230px;
+        }
+
+        #tab1-2 {
+            width: 280px;
+            float: left;
+            height: 280px;
+            border-left: dotted 1px gray;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        input {
+            min-width: 100px;
+            min-height: 30px;
+        }
+    </style>
+
+    <script src="../js/jquery-1.6.4.min.js"></script>
+    <script src="../js/Common.js"></script>
+</head>
+<body>
+
+    <fieldset class="demo1" style="width: 600px;">
+        <legend>Demo 1 : Event linkage </legend>
+        <div id="tab1-1" class="ctx-tabs" style="width: 280px; float: left;">
+            <ul class="ctx-tabs-header">
+                <li class="ctx-tabs-item">1</li>
+                <li class="ctx-tabs-item">2</li>
+                <li class="ctx-tabs-add">+</li>
+                <li class="ctx-tabs-remove">- remove</li>
+            </ul>
+            <div class="ctx-tabs-content">tab 1 content {maxTabs:3, minTabs: 1}</div>
+            <div class="ctx-tabs-content">
+                <div>tab 2 content</div>
+            </div>
+        </div>
+        <div id="tab1-2" class="ctx-tabs" style="">
+            <ul>
+                <li>Jobs</li>
+                <li>Contact Info</li>
+            </ul>
+            <div>
+                If you are between 25 and 40 years old, ethnically Chinese, and a native English speaker who is effectively bilingual 
+                Please send a clear head shot and a recent copy of yourtraveloguejobs@126.com.
+            </div>
+            <div>
+                Address: 11B Fuxing Road, Beijing, China 100038 
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var tab1_1 = CtxAuthoringTool.Common.tabs("#tab1-1", { minTabs: 1, maxTabs: 3 });
+                var tab2_2 = CtxAuthoringTool.Common.tabs("#tab1-2", { minTabs: -1, maxTabs: 3 });
+                tab1_1.onfocused = function (index) {
+                    tab2_2.focus(index);
+                }
+            });
+        </script>
+    </fieldset>
+
+    <fieldset style="width: 400px; float: left;">
+        <legend>Demo 2: Add / Remove Event </legend>
+        <div id="tab2-1" class="ctx-tabs">
+            <ul class="ctx-tabs-header">
+                <li class="ctx-tabs-add">+</li>
+                <li class="ctx-tabs-remove">- remove</li>
+            </ul>
+
+        </div>
+        <input type="button" id="btn-empty" value="empty tabs" />
+        <input type="button" id="btn-add" value="add tab" />
+        <input type="button" id="btn-remove" value="remove tab" />
+        <script type="text/javascript">
+            $(function () {
+                var tab2_1 = CtxAuthoringTool.Common.tabs("#tab2-1", { maxTabs: 6 });
+                tab2_1.onAddClick = function () {
+                    var flag = confirm("Add a new tab ?");
+                    var tabMap = { itemText: "", contentText: "new tab content" };
+                    if (flag) {
+                        tabMap.itemText = prompt("input new tab item text:", "{tab name}") || tabMap.itemText;
+                        tabMap.contentText = prompt("input new tab content text:", "{new tab content}") || tabMap.contentText;
+                        return tabMap;
+                    } else {
+                        return false;
+                    }
+                };
+                tab2_1.onRemoveClick = function () {
+                    return confirm("Delete it ?");
+                };
+
+                $("#btn-empty").click(function () {
+                    tab2_1.empty();
+                });
+                $("#btn-add").click(function () {
+                    tab2_1.add([{ itemText: "t1", contentText: "{t1 content}" }, { itemText: "t2", contentText: "{t2 content}" }]);
+                });
+                $("#btn-remove").click(function () {
+                    tab2_1.remove(0);
+                });
+
+            });
+        </script>
+    </fieldset>
+
+    <fieldset>
+        <legend>Demo 3 : Date bind / render </legend>
+        <div id="tab3-1">
+        </div>
+        <div id="tab3-2">
+        </div>
+        <div id="tab3-3">
+            <ul>
+                <li>china</li>
+                <li>world</li>
+                <li>biz</li>
+            </ul>
+            <div>
+                Bird flu pandemic "unlikely"
+            </div>
+            <div>
+                1 suspect of Boston bombings dead, 1 at large
+            </div>
+            <div>
+                BRICS Fin Mins & C. Bankers discuss world economy
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var tabMap_1 = [{ itemText: "Tab A", contentText: "A Content" }, { itemText: "Tab B", contentText: "B Content" }];
+                var tabMap_2 = [{ contentText: "AA Content" }, { contentText: "BB Content" }];
+                var tabMap_3 = [{ itemText: "Sports", contentText: "Sports content: Guan Tianlang accepts sponsor´s exemption" }, { itemText: "Culture", contentText: "Dancing in the aisles on Broadway" }, { itemText: "Lifestyle", contentText: "Exclusive breastfeeding lowers mother-to-child HIV risk" }]
+                var tab3_1 = CtxAuthoringTool.Common.tabs("#tab3-1", { tabMap: tabMap_1 });
+                var tab3_2 = CtxAuthoringTool.Common.tabs("#tab3-2", { tabMap: tabMap_2 });
+                var tab3_3 = CtxAuthoringTool.Common.tabs("#tab3-3", { maxTabs: 5, tabMap: tabMap_3 });
+            });
+        </script>
+    </fieldset>
+
+    <fieldset id="demo4">
+        <legend>Demo 4 : Tabs limit {min:0, max:4}</legend>
+        <div id="tab4-1">
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var tab4 = CtxAuthoringTool.Common.tabs("#tab4-1", { minTabs: 0, maxTabs: 4 });
+            });
+        </script>
+    </fieldset>
+</body>
+</html>
+

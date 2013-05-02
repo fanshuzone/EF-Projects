@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Multiple Choice Authoring Tool</title>
+<link type="text/css" rel="stylesheet" href="../css/Common.css" />
+<link type="text/css" rel="stylesheet" href="../css/MultipleChoice.css" />
+<script type="text/javascript" language="javascript" src="../js/jquery-1.6.4.min.js"></script>
+<!--<script type="text/javascript" language="javascript" src="../../js/common/plupload.full.js"></script>-->
+    <script src="../../templates/js/common/plupload.full.js"></script>
+<!--<script type="text/javascript" language="javascript" src="../../js/common/json2.js"></script>-->
+<!-- <script type="text/javascript" language="javascript" src="../../js/activity/Common_m.js"></script>   
+ -->
+ <script type="text/javascript" src="../js/ckeditor.js"></script>
+ <script type="text/javascript" src="..	/js/Common.js"></script>  
+ <script type="text/javascript" src="../js/MultipleChoice.js"></script>  
+</head>
+<body>
+	<div class="ctx-wrapper">
+		<div class="ctx-top">
+			<div class="ctx-top-task">
+				<input type="text" class="ctx-meta TextArea TextArea_FocusOut" defaulttext="Meta Tag" value="Meta Tag"/>
+			</div>
+			
+			<div class="ctx-top-tasktitle">
+				<input type="text" class="inputTaskText TextArea TextArea_FocusOut" value="Task Title" defaultText="Task Title"/>
+			</div>
+			<div class="ctx-top-submit">submit</div>
+		</div>
+		<div class="ctx-instruction">
+			<textarea class="ctx-instructionText TextArea TextArea_FocusOut" defaultText="Task Instruction">Task Instruction</textarea>
+		</div>
+		
+		<div class="ctx-content">
+			<div class="ctx-content-top">
+				<div class="ctx-questionArea">
+					
+					<span>Choice Type</span>
+					<select class="ctx-mcType">
+						<option>image</option>
+						<option>text</option>
+						<option>audio</option>
+					</select>
+					<span>StimulusType</span>
+					<select class="ctx-stiType">
+						<option value="pa">Per Activity</option>
+						<option value="pq">Per Question</option>
+					</select>
+					<span>OptionType</span>
+					<select class="optType">
+						<option value="Text">text</option>
+						<option value="Image">image</option>
+					</select>
+				</div>
+			</div>
+			<div class="ctx-content-left">
+				<!-- <h2>Type:Text</h2>
+				<textarea class="StimulusText TextArea TextArea_FocusOut">
+					StimulusText here
+				</textarea> -->
+			</div>
+			<div class="ctx-content-right">
+				<div class="tab">
+<!-- 					<div class="tab-item">1</div>
+					<div class="tab-item">2</div>
+					<div class="tab-item">3</div> -->
+					<div class="addQuestion">+</div>
+					<div class="removeQuestion">- remove</div>
+				</div>
+
+				<div class="ctx-questionContainer">
+					<textarea type="text" class="ctx-questionText TextArea TextArea_FocusOut" defaultText="question text here">question text here</textarea>
+					<div class="ctx-optionContainer">
+						<div class="addOption">+</div>
+						<!-- <div class="option">
+							<div class="remove">-</div>
+							<div class="choose"></div>
+							<input type="text" class="input-option TextArea_FocusOut"/>
+						</div>	
+						<div class="option">
+							<div class="remove">-</div>
+							<div class="choose"></div>
+							<input type="text" class="input-option TextArea_FocusOut"/>
+						</div>
+						<div class="option">
+							<div class="remove">-</div>
+							<div class="choose"></div>
+							<input type="text" class="input-option TextArea_FocusOut"/>
+						</div> -->
+						<!-- <div class="checkboxImg">
+							<div class="imgArea">no image uploaded...</div>
+							<div class="selectBtn">...</div>
+							<div class="uldBtn">upload</div>
+							<div class="removeImage">-</div>
+						</div>
+						<div class="checkboxImg">
+							<div class="imgArea">no image uploaded...</div>
+							<div class="selectBtn">...</div>
+							<div class="uldBtn">upload</div>
+							<div class="removeImage">-</div>
+						</div>
+						<div class="checkboxImg">
+							<div class="imgArea">no image uploaded...</div>
+							<div class="selectBtn">...</div>
+							<div class="uldBtn">upload</div>
+							<div class="removeImage">-</div>
+						</div> -->
+					</div>	
+				</div>
+			</div>
+			<div class="stimulusText" style="display:none;">
+				
+				<!-- <textarea class="StimulusText TextArea TextArea_FocusOut" defaultText="StimulusText here">
+
+				</textarea> -->
+			</div>
+			<div class="stimulusImage" style="display:none;">
+				<h2>ImageArea</h2>
+			</div>
+			<div class="stimulusAudio" style="display:none;">
+				<h2>AudioArea</h2>
+			</div>
+			<div class="checkboxTempalte" style="display:none;">
+				<div class="remove">-</div>
+				<div class="choose"></div>
+				<input type="text" class="TextArea input-option TextArea_FocusOut" defaultText="Option Text here"/>
+			</div>
+			<div class="tab-itemTemplate" style="display:none;"></div>
+			<div class="checkboxImgTemplate" style="display:none;">
+				<div class="imgArea">
+					<span>no image uploaded...</span>
+					<img src=""/>
+				</div>
+				<div class="selectBtn">...</div>
+				<div class="uldBtn">upload</div>
+				<div class="removeImage">-</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

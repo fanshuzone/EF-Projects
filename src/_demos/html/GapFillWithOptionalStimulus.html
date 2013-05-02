@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Gap Fill With Optional Stimulus Authoring Tool</title>
+    <link type="text/css" rel="stylesheet" href="../css/Common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/GapFillWithOptionalStimulus.css" />
+
+    <script type="text/javascript" language="javascript" src="../js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/common/plupload.full.js"></script>
+    <script type="text/javascript" src="../js/ckeditor.js"></script>
+    <script type="text/javascript" src="../js/Common.js"></script>
+    <script type="text/javascript" src="../js/GapFillWithOptionalStimulus.js"></script>
+
+</head>
+<body>
+
+    <div class="stimulus-wrapper">
+        <div id="s001" class="stimulus-text">
+        </div>
+        <div class="stimulus-audio"></div>
+    </div>
+    <div class="ctx-wrapper">
+        <div class="ctx-common">
+            <div class="ctx-top">
+                <div class="ctx-top-task">
+                    <input type="text" class="ctx-meta TextArea TextArea_FocusOut" defaulttext="Meta Tag" value="Meta Tag" />
+                </div>
+
+                <div class="ctx-top-tasktitle">
+                    <input type="text" class="inputTaskText TextArea TextArea_FocusOut" value="Task Title" defaulttext="Task Title" />
+                </div>
+                <div class="ctx-top-submit">submit</div>
+
+            </div>
+            <div class="ctx-instruction">
+                <textarea class="ctx-instructionText TextArea TextArea_FocusOut" rows="2" defaulttext="Task Instruction">Task Instruction</textarea>
+            </div>
+        </div>
+        <div class="ctx-content">
+           
+            <div class="ctx-content-left">
+                <div class="ctx-questionArea">
+                    <span>Without stimulus</span>
+                    <input id="ckHasStimulus" type="checkbox" />
+
+                </div>
+                <div class="ctx-gap-questions">
+                    <ul>
+                        <li class="ctx-tabs-add">+ Add Question</li>
+                        <li class="ctx-tabs-remove">- Remove</li>
+                    </ul>
+                </div>
+               
+            </div>
+             <div class="ctx-content-right">
+                 <div class="stimulus-type-choose">
+                    <span class="ctx-tpl-stimulusTypeText">StimulusType:</span>
+                    <select class="ctx-tpl-stimulusType">
+                        <option value="text">text</option>
+                        <option value="audio">audio</option>
+                    </select>
+                </div>
+                <div class="ctx-stimuli">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script id="tpl-question" type="text/template">
+        <div id="ctx-question-wrapper-{id}" class="ctx-question-wrapper">
+            <textarea rows="1" class="ctx-questionText TextArea" defaulttext="question text here">question text here</textarea>
+            <div class="ctx-gap-opt-tip">
+                <span class="ctx-tpl-stimulusTypeText">select the text then click strikethrough to make the text as a gap</span>
+            </div>
+            <div class="ctx-question-content">
+                <div id="contentText-{id}" class="ckeditor-text">
+                    {content}
+                </div>
+                 <div class="wordCount">
+                  <span class="num">0</span> / <span class="max">350</span> words
+                </div>
+            </div>
+            <div id="ctx-options-{id}" class="ctx-distractors">
+            </div>
+
+        </div>
+    </script>
+    <script id="tpl-stimulus" type="text/template">
+        <div id="stimulusWrapper-{id}" class="ctx-tpl-stimulus-wrapper" style="height: 100%; width: 100%;">
+            <div class="ctx-stimulus-text-wrapper">
+                <div id="stimulusText-{id}" class="ctx-tpl-stimulus-text ckeditor-text">
+                    {content}
+                </div>
+                <div class="wordCount">
+                  <span class="num">0</span> / <span class="max">350</span> words
+                </div>
+            </div>
+            <div class="ctx-stimulus-audio-wrapper">
+                <div id="ctxUploader{id}" class="ctx-stimulus-uploader">
+                </div>
+            </div>
+
+        </div>
+    </script>
+</body>
+</html>

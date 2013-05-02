@@ -1,0 +1,86 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+padding: 0;
+margin: 0;
+}
+body{font-family:Arial;background-color:#FAF9F3;}
+.ctx-wrapper{border:1px solid #EBE5D0; width:980px;height:680px;margin:auto;background-color:#EEE;}
+.ctx-top{height:50px;width:100%;font-size:13px;line-height:50px;text-align:center;font-weight:bold;/*background-color:#E6DFC4;*/color:#C2B171;}
+.ctx-top-task{height:50px;float:left;width:220px;}
+.ctx-top-remaining{border-left:1px solid;height:50px;width:120px;float:left;}
+
+/*reflector:: fixed width */
+.ctx-top-tasktitle{float:left;width:604px;height:40px;line-height:40px;margin-top:5px;}
+.ctx-top-submit{border:1px solid #25BB00;height:40px;float:left;width:120px;line-height:40px;margin-left:10px;margin-top:5px;background-color:#25BB00;color:#FFF;cursor:pointer;}
+.ctx-instruction{height:30px;margin-top:10px;}
+.ctx-content{width:100%;height:580px;margin-top:10px;}
+.ctx-content-left{width:300px;height:430px;margin:10px;float:left;border-right:1px dashed #CACACA;}
+.ctx-content-right{width: 610px;float: left;min-height: 450px;margin: 10px;background-color: #FFF;overflow: hidden;padding: 10px;}
+.ctx-content-top{width:100%;height:50px;}
+.ctx-questionArea{line-height:50px;}
+.ctx-questionArea span{font-size:12px;font-weight:bold;margin-left:10px;color:#C2B171;}
+.ctx-questionText{height:38px;width:580px;margin-left:10px;}
+select.ctx-mcType{}
+.ctx-questionArea select{border:1px solid #999;}
+
+/*reflector::
+      adjust line-height 
+      diable resize 
+      hide scrollbar
+ */
+.ctx-instructionText{height:30px;margin-left:10px;width:940px; line-height:28px; resize:none; overflow:hidden; }
+.TextArea_FocusOut{border:1px dotted #999;color:#CACACA;font-family:Arial;resize:none;padding:0 2px;background:none;}
+.TextArea_FocusIn{border:1px solid #0792B5;background-color:#FFF;}
+.TextArea_Normal{background: none;border:1px dotted #999;}
+.StimulusText{height:300px;margin:20px;}
+.ctx-content-left h2{margin:10px;color:#999;}
+.inputTaskText{height:40px;width:580px;font-size:28px;}
+
+
+.ctx-meta{height:40px;margin:5px;height: 40px;width: 200px;font-size: 28px;}
+
+/*css for tabs*/
+.ctx-tabs{min-width:100px;}
+.ctx-tabs .btndisable {opacity: 0.4; filter:alpha(opacity=40); cursor:default;    }
+.ctx-tabs-header{display:block;clear:both;height:40px;margin:0px 0px 5px 0px;padding:0px 0px 0px 10px;font-size:13px;border-bottom:1px dotted #cacaca;}
+.ctx-tabs-header li{height:30px;min-width:30px;display:block;float:left;border:1px solid #FFF;margin:5px 0px 0px;padding:0px 4px;text-align:center;line-height:30px;color:#0792B5;background-color:#eee;font-weight:bold;cursor:pointer;}
+.ctx-tabs-item:hover{background-color:rgb(240,249,252);color:#0792b5;border:1px solid;}
+.ctx-tabs-item.focus,.ctx-tabs-item.focus:hover{background-color:#0792B5;color:#FFF;}
+.ctx-tabs-header li.ctx-tabs-add{border:1px solid;float:left;height:30px;width:30px;text-align:center;line-height:30px;font-weight:bold;background-color:#0792b5;color:#fff;cursor:pointer;}
+.ctx-tabs-header li.ctx-tabs-remove{border:1px solid;height:20px;width:70px;float:right;text-align:center;line-height:20px;font-size:12px;margin:10px 0px 0px 0px;background-color:#d52b4d;color:#fff;}
+.ctx-tabs-header li.ctx-tabs-remove:hover{background-color:#FFF;color:#d52b4D;cursor:pointer;}
+.ctx-tabs-header li.ctx-tabs-add.btndisable{cursor:default;}
+.ctx-tabs-header li.ctx-tabs-remove:hover.btndisable{border:1px solid;height:20px;width:70px;float:right;text-align:center;line-height:20px;font-size:12px;margin:10px 0px 0px 0px;background-color:#d52b4d;color:#fff;cursor:default;}
+.ctx-tabs-content{display:none;clear:both;width:100%;}
+.ctx-tabs-content.focus{display:block;}
+
+/* plugin for distractor*/
+.ctx-distractors .addOptionWrapper{clear:both;margin:10px 0px 0px 10px;}
+.ctx-distractors .addOption{border:1px solid #0792B5;width:20px;text-align:center;background-color:#0792B5;color:#FFF;cursor:pointer;border-radius:20px;float:left;clear:left;margin-right:5px;}
+.ctx-distractors .ctx-options{font-family:Arial;height:20px;margin:10px;padding:0px;}
+.ctx-distractors .addOptionTxt{font-size:13px;line-height:20px;color:#C2B171;font-weight:bold;}
+.ctx-distractors .remove:hover{background-color:#FFF;color:#D52B4D; cursor:pointer;}
+.ctx-distractors .remove{border:1px solid #D52B4D;width:20px;text-align:center;background-color:#D52B4D;color:#FFF;border-radius:20px;float:left;clear:left;margin-right:5px;}
+.ctx-distractors .input-option{height:20px;width:200px;}
+.ctx-distractors .textarea-empty{background:none;border:2px dotted #F00;}
+.ctx-distractors .btndisable{opacity:0.4; filter:alpha(opacity=40); cursor:default;}
+/* plugin for gap uploader */
+.ctx-stimulus-uploader{border:1px solid #EEE;width:320px;font-size:12px;color:#333;margin:10px;height:165px;background-color:#EEE;position:relative;}
+.ctx-stimulus-info{text-align:center;margin-top:30px;font-size:15px;color:#888;}
+.stimulus-info-txt{margin-bottom:10px;display:block;}
+.ctx-stimulus-uploader:hover{border-color:#0792B5;}
+.ctx-stimulus-uploader .btns{position:absolute;bottom:8px;width:150px;text-align:center;line-height:30px;font-weight:bold;left:30%;}
+.ctx-stimulus-uploader .selectBtn{width:40px;height:30px;border-color:#CACACA;border:1px solid #CACACA;cursor:pointer;float:left;}
+.ctx-stimulus-uploader .uploadBtn{border:1px solid;cursor:pointer;height:30px;width:54px;color:#0792B5;border:solid 1px #0792B5;float:left;margin-left:10px;}
+.ctx-stimulus-uploader .selectBtn:hover,.ctx-stimulus-uploader .uploadBtn:hover,.ctx-stimulus-uploader .removeImage:hover{background-color:#CAC;}
+
+/* plugin for popup */
+.WarningMask{position:fixed;background-image:url(../image/WarningLayerBG.png);background-repeat:repeat;left:0px;top:0px;width:100%;height:100%;z-index:10000;display:none;}
+.WarningPanel{background-image:url(../image/act_global.png);background-position:-11px -688px;width:618px;position:fixed;height:305px;z-index:10001;top:150px;display:none;text-align:left;}
+.WarningTitle{width:100%;height:40px;font-size:20px;font-weight:bold;line-height:40px;color:#009;}
+.WarningTitle span{margin-left:35px;}
+.WarningContent{width:420px;height:192px;margin-left:180px;margin-top:15px;font-size:16px;}
+.WarningBottom{margin-top:15px;width:100%;height:35px;position:relative;}
+.WarningConfirmButton{background-image:url(../image/act_global.png);width:63px;height:24px;float:right;margin-top:3px;margin-right:10px;text-align:center;line-height:25px;font-size:14px;cursor:pointer;font-weight:bold;background-position:-54px -226px;}
+.WarningCancelButton{background-image:url(../image/act_global.png);width:63px;height:24px;float:right;margin-top:3px;margin-right:10px;text-align:center;line-height:25px;font-size:14px;cursor:pointer;font-weight:bold;background-position:-54px -226px;}
+.WarningConfirmButton_MouseOver{background-position:-54px -199px;}

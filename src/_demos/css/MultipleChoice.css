@@ -1,0 +1,28 @@
+.ctx-optionContainer{width:500px;margin:auto;margin-top:30px;margin-left:10px;min-height:200px;overflow:hidden;}
+.addOption{border:1px solid #0792B5;width:20px;text-align:center;background-color:#0792B5;color:#FFF;cursor:pointer;border-radius:20px;}
+.checkbox{margin-top:10px;width:600px;}
+.remove,.choose{float:left;cursor:pointer;}
+.remove{border:1px solid #D52B4D;width:20px;text-align:center;background-color:#D52B4D;color:#FFF;border-radius: 20px;}
+.remove:hover{background-color:#FFF;color:#D52B4D;}
+.choose{border:1px solid #CACACA ;height:20px;width:20px;margin: auto 5px auto 5px;background-color:#FFF;text-align: center;color:#0792B5;font-weight:bold;}
+.input-option{height:20px;width:400px;}
+.tab{height:30px;padding-left:10px;margin-bottom:10px;border-bottom:1px dotted #CACACA;padding-bottom:5px;}
+.tab-item{border:1px solid #FFF;float:left;height:30px;width:30px;text-align:center;line-height:30px;background-color:#EEE;font-weight:bold;color:#0792B5;cursor: pointer;}
+.addQuestion{border:1px solid;float:left;height:30px;width:30px;text-align:center;line-height:30px;font-weight:bold;background-color:#0792B5;color:#FFF;cursor: pointer;}
+.currentQuestion{background-color:#0792B5;color:#FFF;}
+.btndisable{opacity: 0.4;}
+
+.removeQuestion{border:1px solid;height:20px;width:70px;float:right;text-align:center;line-height:20px;font-size:12px;background-color:#D52B4D;color:#FFF;}
+.removeQuestion:hover{background-color:#FFF;color:#D52B4D;cursor:pointer;}
+*:focus{outline: none;}
+.checkboxImg{border:1px solid #EEE;float:left;width:130px;font-size:12px;color:#333;margin:10px;height:130px;background-color: #EEE;}
+.checkboxImg:hover{border-color:#0792B5;}
+.imgArea{height:90px;margin:5px;padding-left: 10px;}
+.imgArea img{margin:auto;}
+.selectBtn,.uldBtn,.removeImage{float:left;border:1px solid;margin-left:10px;cursor: pointer;}
+.selectBtn{width:20px;height:20px;text-align:center;border-color:#CACACA;}
+.removeImage{width:20px;height:20px;text-align:center;color:#D52B4D;}
+.uldBtn{height:20px;line-height:20px;color:#0792B5}
+
+.selectBtn:hover,.uldBtn:hover,.removeImage:hover{background-color:#CAC;}
+.optImgAct{border:2px solid #0792B5;}
